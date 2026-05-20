@@ -1,0 +1,159 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background: #000;
+  color: #eee;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* Navigation */
+nav {
+  background: linear-gradient(90deg, #111, #222);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+}
+
+.nav-logo {
+  max-width: 307px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 25px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff4081; /* Bright pink hover */
+  transform: translateY(-3px);
+}
+
+nav ul li::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+  margin: auto;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Buttons */
+.btn {
+  display:inline-block;
+  background: linear-gradient(135deg, #ff4081, #00e5ff);
+  color:linear-gradient(135deg, #ff4081, #00e5ff);
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration:none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background:#00e5ff;
+  color:linear-gradient(135deg, #ff4081, #00e5ff);
+  box-shadow: 0 0 15px #00e5ff;
+}
+
+/* Sections */
+section {
+  padding: 60px 10%;
+  border-bottom: 1px solid #333;
+}
+
+/* Cards (Cart & Product) */
+.cart-item, .product {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 25px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover, .product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+/* Feedback Form */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 10px #00e5ff;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 25px;
+  color: #888;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+
+.footer-logo {
+  max-width: 70px;
+  height: auto;
+}
+
+
+/* Animations */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #ff4081; }
+  50% { text-shadow: 0 0 20px #00e5ff; }
+  100% { text-shadow: 0 0 5px #ff4081; }
+}
+
+.highlight {
+  color: #00e5ff;
+  font-weight: bold;
+  animation: glow 2s infinite alternate;
+}
